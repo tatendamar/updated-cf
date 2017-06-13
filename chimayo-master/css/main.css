@@ -1,0 +1,312 @@
+/* get rid of default padding and margin */
+*{
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+html{
+	height: 100%;
+}
+body{
+/*instead for the font we could just write font: 15px/1.5 Arial, Helvetica, sans-serif;*/
+  height: 100%;
+	font-family: Raleway,arial, Helvetica, sans-serif;
+	font-size: 15px;
+	line-height: 1.5;
+	padding: 0;
+	margin: 0;
+	background-color: #f4f4f4;
+}
+header,nav,article,section,footer,aside{
+	display: block;
+}
+
+/* global */
+.container{
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+}
+.clear{
+	clear: both;
+}
+header{
+	position: fixed;
+	text-transform: uppercase;
+	width: 100%;
+	background: #228b22;
+	color: #ffd700;
+	font-weight: bold;
+	/*z-index: 99;*/
+	text-align: center;
+}
+nav ul{
+	position: fixed;
+	background-color: rgba(0,0,0,.5);
+	overflow: hidden;
+	color: #fff;
+	width: 100%;
+	text-align: right;
+	margin: 0;
+	transition: max-height 1s;
+	z-index: 99;
+}
+nav ul li{
+	display: inline-block;
+	padding: 20px;
+	margin-top: 20px;
+}
+nav ul li a{
+	clear: right;
+	text-decoration: none;
+	color: #FFD700;
+}
+nav ul li:hover{
+	background-color: #228b22;
+}
+nav ul li :visited{
+	color: #FFD700;
+}
+.menu-icon{
+	width: 26px;
+	margin: 0 20px 5px 0;
+	float: right;
+	box-sizing: border-box;
+	padding: 15px 10px;
+	color: #000;
+	display: none;
+}
+/*sect and sub fixed background scroll*/
+.sect{
+	height: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+.subSection{
+	height: 200px;
+	align-items: center;
+	background-attachment: fixed;
+
+}
+.sectOne{
+	background-image: url("../images/wheatfixed.jpg");
+}
+.sectTwo{
+background-image: url("../images/circle.jpg");
+}
+/*.sectThree{
+background-image: url("../images/HIGH6099.jpg");
+}*/
+.sectOne h1{
+    left: 0;
+    line-height: 200px;
+    /*margin: auto;*/
+    margin-top: -100px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+		color: #228b22;
+		text-transform: uppercase;
+		text-align: center;
+}
+.sectOne p{
+	  font-size: 20px;
+	  color: #fff;
+		text-align: center;
+    left: 0;
+    line-height: 200px;
+  /*  margin: auto;*/
+    margin-top: -100px;
+    position: absolute;
+    top: 60%;
+    width: 100%;
+}
+.sub1{
+	align-items: center;
+	padding: 20px 0;
+	color: #fff;
+	background: #228b22;
+	margin-bottom: 1px;
+}
+.sub1 h2{
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 5px;
+	margin-bottom: 20px;
+}
+.sub1 p{
+ color: #333;
+}
+/* boxes*/
+.sectTwo{
+	margin-top: -1px;
+}
+.sectTwo .box{
+	float: left;
+	text-align: center;
+	width: 20%;
+	padding: 10px;
+	margin-top: 200px;
+}
+#content{
+	color: #444;
+	max-height: 20px;
+	overflow: hidden;
+/* set transition*/
+-webkit-transition: max-height 0.7s;
+-moz-transition: max-height 0.7s;
+transition: max-height 0.7s;
+}
+#content.open{
+	max-height: 100px;
+
+	/*set transition*/
+	-webkit-transition: max-height 0.7s;
+	-moz-transition: max-height 0.7s;
+	transition: max-height 0.7s;
+}
+#show-more{
+	text-transform: uppercase;
+	margin: -10px;
+}
+.sectTwo .box img{
+	width: 100px;
+}
+.subSection1{
+	height: 290px;
+	align-items: center;
+	padding: 15px 0;
+	background:	#32CD32;
+	margin-bottom: -20px;
+}
+ .subSection1 .gallery{
+ text-align: center;
+}
+.subSection1 h4{
+	text-transform: uppercase;
+	font-weight: 600;
+	text-align: center;
+	color: #FFEBCD;
+}
+#contactSection{
+	background-size: cover;
+	background-attachment: fixed;
+	height: 500px;
+	margin-bottom: -20px;
+}
+/* make footer clear floated elements*/
+.page_footer{
+	height: 275px;
+	margin-bottom: 0px;
+	background-color: #f5f5f5; /*rgba(0,0,0,.5);*/
+}
+.page_footer h4{
+	text-align: center;
+	margin-top: 20px;
+	padding-top: 20px;
+}
+.page_footer p{
+	text-align: center;
+	margin-top: 40px;
+}
+.page_footer h5{
+	text-align: center;
+	margin-top: 30px;
+}
+.page_footer address{
+	text-align: center;
+	margin-top: 10px;
+}
+.page_footer hr{
+	border-bottom: 1px solid #fffaf0;
+}
+.page_footer a{
+	text-align: left;
+	margin-top: -25px;
+  font-style:oblique;
+  font-size: 10px;
+}
+.page_footer h6{
+	text-align: right;
+	margin-right: 5px;
+	margin-top: -20px;
+	color: rgba(150, 98, 44,.5);
+	font-style:oblique;
+	font-size: 10px;
+}
+
+
+/* media queries*/
+/*@import "https://fonts.googleapis.com/css?family=Open+Sans";*/
+@media(max-width: 768px){
+	nav ul{
+		max-height: 0px;
+
+	}
+    nav ul li{
+			box-sizing: border-box;
+			width: 100%;
+			padding: 15px;
+			border-bottom: 1px solid #eaeae8;
+			margin: 0;
+		}
+		.menu-icon{
+			display: block;
+			cursor: pointer;
+			margin-top: 5px;
+		}
+		.showing{
+			max-height: 20em;
+		}
+		.sectOne{
+        height: 60%;
+				width: 100%;
+		}
+		.sectTwo{
+			height: 200%;
+			width: 100%;
+		}
+		.sectThree{
+			height: 60%;
+		  width: 100%;
+		}
+		.sectOne h1{
+ 	    margin-top: -250px;
+			text-align: center;
+			width: 100%;
+			font-size: 18px;
+			color:
+     }
+		 .sectOne p{
+			 text-align: center;
+			 width: 100%;
+			 margin-top: -75%;
+
+		 }
+     .subSection .sub1{
+ 	       display: block;
+         width: 100%;
+
+      }
+			.sub1 h2{
+				margin-top: 1px;
+			  text-align: center;
+			  width: 100%;
+			  font-size: 18px;
+			}
+			.sub1 p{
+				width: 100%;
+				margin-top: -15px;
+			}
+     .sectTwo .box{
+			 text-align: center;
+			 width: 100%;
+			 margin-top: 1px;
+		 }
+		 .subSection1{
+			 width: 100%;
+			 height: 250px;
+		 }
+
+			 }
